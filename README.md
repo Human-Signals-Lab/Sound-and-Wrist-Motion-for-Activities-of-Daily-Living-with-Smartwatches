@@ -30,7 +30,7 @@ The dataset is made available for download on [Texas Data Repository Dataverse](
   - Inference: [main_WILD_Inference_Audio.py](main_WILD_Inference_Audio.py), [main_WILD_Inference_motion.py](main_WILD_Inference_motion.py), [main_WILD_Inference_AudioMotion.py](main_WILD_Inference_AudioMotion.py), [main_WILD_Inference_AudioMotion_PerParticipant.py](main_WILD_Inference_AudioMotion_PerParticipant.py), [main_Wild_Inference_AudioMotion_SoftmaxAveraging.py](main_Wild_Inference_AudioMotion_SoftmaxAveraging.py)
   - Finetune: [main_WILD_FinetuneInference_AudioMotion_PerParticipant.py](main_WILD_FinetuneInference_AudioMotion_PerParticipant.py) 
 
-To run the scripts, check the next [section](#running-the-main-scripts).
+To run the scripts, check the next [section](#running-the-scripts).
 
 
 ## Model Definition:
