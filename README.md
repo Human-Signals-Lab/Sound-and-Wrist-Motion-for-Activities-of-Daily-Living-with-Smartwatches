@@ -57,7 +57,7 @@ experiment = '{EXPERIMENT_NAME}'  # this will identify the name of the folder cr
 Note that the model definition should be in line with the input modality of the script. Also, make sure the data is saved in a './Data' directory. 
 
 
-That's all! For help, questions, and general feedback, contact Rebecca Adaimi (rebecca.adaimi@utexas.edu)
+That's all! For help, questions, and general feedback, contact Rebecca Adaimi (rebecca.adaimi@utexas.edu) or Sarnab Bhattacharya (sarnab2008@utexas.edu). 
 
 
 ## Reference 
