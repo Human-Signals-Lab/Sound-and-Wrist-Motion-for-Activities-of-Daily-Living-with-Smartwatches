@@ -50,9 +50,14 @@ Models defined in [models.py](models.py)
 
 As you can see above, python scripts are named according to which evaluation setting (LOPO, LOSO, or P-LOPO/LOPO+1) and which modalities as input (Audio, Motion for single-modal and MotionAudio for fusion). In each script, you define the corresponding model by changing the model definition in the script:
 ```
-model_name = '{MODEL_DEFINITION}' # define one of the model definitions defined in the previous [section](#model-definition)
+model_name = '{MODEL_DEFINITION}' # define one of the model definitions defined in the previous section
 experiment = '{EXPERIMENT_NAME}'  # this will identify the name of the folder created where model + results are saved
 ``` 
+
+Note that the model definition should be in line with the input modality of the script. Also, make sure the data is saved in a './Data' directory. 
+
+
+That's all! For help, questions, and general feedback, contact Rebecca Adaimi (rebecca.adaimi@utexas.edu)
 
 
 ## Reference 
