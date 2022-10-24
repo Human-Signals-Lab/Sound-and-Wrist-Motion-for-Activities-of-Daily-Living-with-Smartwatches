@@ -33,7 +33,8 @@ The dataset is made available for download on [Texas Data Repository Dataverse](
 To run the scripts, check the next [section](#running-the-main-scripts).
 
 
-## Models in [models.py](models.py):
+## Model Definition:
+Models defined in [models.py](models.py)
  
 | Model Definition                                 | Input Modalities | Motion Model       | Audio Model | Fusion Method |
 | ----------------                                 | :--------------: | :-----------:      | :---------: | :-----------: |
@@ -47,7 +48,11 @@ To run the scripts, check the next [section](#running-the-main-scripts).
 
 ### Running the Scripts:
 
-As you can see above, python scripts are named according to which evaluation setting (LOPO, LOSO, or P-LOPO/LOPO+1) and which modalities as input (Audio, Motion for single-modal and MotionAudio for fusion). In each script, 
+As you can see above, python scripts are named according to which evaluation setting (LOPO, LOSO, or P-LOPO/LOPO+1) and which modalities as input (Audio, Motion for single-modal and MotionAudio for fusion). In each script, you define the corresponding model by changing the model definition in the script:
+```
+model_name = '{MODEL_DEFINITION}' # define one of the model definitions defined in the previous [section](#model-definition)
+experiment = '{EXPERIMENT_NAME}'  # this will identify the name of the folder created where model + results are saved
+``` 
 
 
 ## Reference 
