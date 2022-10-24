@@ -1564,7 +1564,6 @@ class Attention(nn.Module):
 
 __factory = {
     "AttendDiscriminate": AttendDiscriminate,
-    "AttendDiscriminate_MotionAudio": AttendDiscriminate_MotionAudio,
     'DeepConvLSTM_Classifier': DeepConvLSTM_Classifier,
     'Audio_CNN14': Audio_CNN14,
     "AttendDiscriminate_MotionAudio_CNN14": AttendDiscriminate_MotionAudio_CNN14,

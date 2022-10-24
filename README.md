@@ -26,13 +26,28 @@ The dataset is made available for download on [Texas Data Repository Dataverse](
   - [main_LOSO_motion.py](main_LOSO_motion.py), [main_LOSO_Audio.py](main_LOSO_Audio.py), [main_LOSO_MotionAudio.py](main_LOSO_MotionAudio.py), [main_LOSO_MotionAudio_SoftmaxAveraging.py](main_LOSO_MotionAudio_SoftmaxAveraging.py): main scripts that run training as well as inference after training for Leave-One-Session-Out (LOSO) evaluation for single-modal (motion/audio) and fusion-based models respectively.
 - Personalized-LOPO (P-LOPO) Evalution:
   - [main_LOPO+1_motion.py](main_LOPO+1_motion.py), [main_LOPO+1_Audio.py](main_LOPO+1_Audio.py), [main_LOPO+1_MotionAudio.py](main_LOPO+1_MotionAudio.py), [main_LOPO+1_MotionAudio_SoftmaxAveraging.py](main_LOPO+1_MotionAudio_SoftmaxAveraging.py): main scripts that run training as well as inference after training for P-LOPO evaluation for single-modal (motion/audio) and fusion-based models respectively.
+- **In-The-Wild** Analysis:
+  - Inference: [main_WILD_Inference_Audio.py](main_WILD_Inference_Audio.py), [main_WILD_Inference_motion.py](main_WILD_Inference_motion.py), [main_WILD_Inference_AudioMotion.py](main_WILD_Inference_AudioMotion.py), [main_WILD_Inference_AudioMotion_PerParticipant.py](main_WILD_Inference_AudioMotion_PerParticipant.py), [main_Wild_Inference_AudioMotion_SoftmaxAveraging.py](main_Wild_Inference_AudioMotion_SoftmaxAveraging.py)
+  - Finetune: [main_WILD_FinetuneInference_AudioMotion_PerParticipant.py](main_WILD_FinetuneInference_AudioMotion_PerParticipant.py) 
+
+To run the scripts, check the next [section](#running-the-main-scripts).
 
 
-
-To run the scripts with required arguments, check the next [section](#running-the-main-scripts).
-
+## Models in [models.py](models.py):
+ 
+| Model Definition                                 | Input Modalities | Motion Model       | Audio Model | Fusion Method |
+| ----------------                                 | :--------------: | :-----------:      | :---------: | :-----------: |
+| AttendDiscriminate                               | Motion           | AttendDiscriminate | _           | _             |
+| DeepConvLSTM_Classifier                          | Motion           | DeepConvLSTM       | _           | _             |
+| Audio_CNN14                                      | Audio            | _                  | CNN14       | _             |
+| AttendDiscriminate_MotionAudio_CNN14             | Motion + Audio   | AttendDiscriminate | CNN14       | Attention     |
+| AttendDiscriminate_MotionAudio_CNN14_Concatenate | Motion + Audio   | AttendDiscriminate | CNN14       | Concatenate   |
+| DeepConvLSTM_MotionAudio_CNN14_Attention         | Motion + Audio   | DeepConvLSTM       | CNN14       | Attention     |
+| DeepConvLSTM_MotionAudio_CNN14_Concatenate       | Motion + Audio   | DeepConvLSTM       | CNN14       | Concatenate   |
 
 ### Running the Scripts:
+
+As you can see above, python scripts are named according to which evaluation setting (LOPO, LOSO, or P-LOPO/LOPO+1) and which modalities as input (Audio, Motion for single-modal and MotionAudio for fusion). In each script, 
 
 
 ## Reference 
